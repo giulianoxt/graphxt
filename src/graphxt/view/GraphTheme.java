@@ -16,17 +16,17 @@ public class GraphTheme {
     public GraphTheme() {
         setBackgroundColor(new Color(50,50,50));
         setEdgeColor(new Color(255,0,0));
-        setEdgeFont(new Font("SansSerif",Font.PLAIN,12));
+        setEdgeFont(new Font("SansSerif",Font.PLAIN,13));
         setEdgeFontColor(Color.WHITE);
         setEdgeWidth(2.5);
         setMaxVertexDiameter(1000);
-        setMinVertexDiameter(0);
+        setMinVertexDiameter(25);
         setSelectedEdgeColor(Color.ORANGE);
         setSelectedVertexFillColor(Color.DARK_GRAY);
         setSelectedVertexGlowColor(Color.WHITE);
         setSelectedVertexGlowSize(8);
         setVertexFillColor(Color.DARK_GRAY);
-        setVertexFont(new Font("SansSerif",Font.PLAIN,12));
+        setVertexFont(new Font("SansSerif",Font.PLAIN,14));
         setVertexFontColor(Color.WHITE);
         setVertexStrokeColor(Color.WHITE);
         setVertexStrokeWidth(1);
