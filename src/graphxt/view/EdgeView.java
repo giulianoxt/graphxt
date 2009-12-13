@@ -57,6 +57,7 @@ public class EdgeView<T,V> {
         setSelected(false);
         setControlPoint(st.getX(),st.getY());
         setVisible(true);
+        setEdgeInfo(null);
     }
     
     /**
@@ -182,7 +183,15 @@ public class EdgeView<T,V> {
     public Shape getEdgeShape() {
         return edge_shape;
     }
-    
+
+    public void setEdgeInfo(String info) {
+      edge_info = info;
+    }
+
+    public String getEdgeInfo() {
+      return edge_info;
+    }
+
     /**
      * Desenha a aresta na superfície representada por g.
      */
@@ -217,7 +226,8 @@ public class EdgeView<T,V> {
         
         surface.setFont(gtheme.getEdgeFont());
         surface.setPaint(gtheme.getEdgeFontColor());
-        String str = edge.getData().toString();
+
+        String str = edge_info != null ? edge_info : edge.getData().toString();
         
         Rectangle2D ret1, ret2, ret3, ret4, result = null, orig = null;
         
@@ -325,6 +335,8 @@ public class EdgeView<T,V> {
     private Edge<T,V> edge;
     private GraphTheme gtheme;
     private VertexView<T> st_view, end_view;
+
+    private String edge_info;
     
     private static final double EDGE_DATA_INC = 10f;
 }
